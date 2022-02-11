@@ -1,0 +1,19 @@
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#foto-perfil {
+    width: 200px;
+    height: 150px;
+    margin: 30px;
+}
+
+#link {
+    color:black;
+}
+
+#link:hover {
+    color: blue;
+}
