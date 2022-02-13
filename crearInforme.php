@@ -1,7 +1,7 @@
 <?php
 
 require 'funciones/conexion.php';
-require 'funciones/informes.php';
+require 'funciones/informesVarones.php';
 require 'funciones/varones.php';
 $chequeo = agregarInforme();
 $perfil = verVaronID();

@@ -1,20 +1,25 @@
 <?php
+
 require 'funciones/conexion.php';
 require 'funciones/varones.php';
-$chequeo = agregarVaron();
+$chequeo = actualizarVaron();
 include 'includes/index.html';
+
 ?>
 
 <main class="container m-5">
 
-    <h1 class="m-5">Alta de un varón</h1>
+    <h1 class="m-5">Modificación de un varón</h1>
 
     <?php
+
     if ($chequeo == true) {
+
     ?>
+
         <div class="row alert alert-success mx-auto">
             <div class="col d-flex justify-content-center align-items-center">
-                <h3>Agregado correctamente!</h3>
+                <h3>Modificado correctamente!</h3>
             </div>
         </div>
         <div class="row">
@@ -23,6 +28,7 @@ include 'includes/index.html';
                 </a>
             </div>
         </div>
+
     <?php
     } else {
     ?>
@@ -40,4 +46,5 @@ include 'includes/index.html';
     <?php
     }
     ?>
+
 </main>

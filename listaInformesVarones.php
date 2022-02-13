@@ -1,25 +1,16 @@
 <?php
 
 require 'funciones/conexion.php';
-require 'funciones/informes.php';
+require 'funciones/informesVarones.php';
 $informes = listaInformesVarones();
 $alertas = informesAlerta();
 $noAsignados = noAsignados();
+$cantidad = cantidadNoAsignados();
 include 'includes/index.html';
+include 'includes/nav.html';
 
 ?>
 <div class="container col-12">
-    <ul class="nav p-4 mx-auto bg-dark">
-        <li class="nav-item m-4">
-            <a href="index.php" class="nav-item text-decoration-none text-light">INICIO</a>
-        </li>
-        <li class="nav-item m-4">
-            <a href="listaVarones.php" class="nav-item text-decoration-none text-light">LISTA VARONES</a>
-        </li>
-        <li class="nav-item m-4">
-            <a href="#" class="nav-item text-decoration-none text-light">INFORMES VARONES</a>
-        </li>
-    </ul>
     <h1 class="m-4">Informes de asignaciones de varones</h1>
     <div class="row mx-auto">
         <div class="col-5">
@@ -37,10 +28,13 @@ include 'includes/index.html';
                     ?>
                         <tr>
                             <td><?= $informe['idinformes_varones'] ?></td>
-                            <td> <a href="verPerfilVaron.php?idvarones=<?= $informe['idvarones'] ?>" class="text-decoration-none" id="link"><?= $informe['nombre'] ?></a> </td>
+                            <td> <a href="verPerfilVaron.php?idvarones=<?= $informe['idvarones'] ?>"  id="link"><?= $informe['nombre'] ?></a> </td>
                             <td><?= $informe['fecha'] ?></td>
-                            <td>
+                            <!-- <td>
                                 <a href="formEliminarInformeVaron.php?idinformes_varones= <?= $informe['idinformes_varones'] ?>" class="btn btn-outline-secondary btn-sm fw-bold">Eliminar</a>
+                            </td> -->
+                            <td>
+                                <a href="verInformeVaron.php?idinformes_varones= <?= $informe['idinformes_varones'] ?>" class="btn btn-outline-dark btn-sm fw-bold"><i class="fas fa-eye"></i> Ver</a>
                             </td>
                         </tr>
                     <?php
@@ -50,12 +44,12 @@ include 'includes/index.html';
             </table>
         </div>
         <div class="col-4">
-            <h3 class="text-center alert alert-danger">Alerta</h3>
+            <h3 class="text-center alert alert-danger mb-0">Alerta</h3>
             <table class="table table-hover table-borderless table-striped text-center">
                 <thead>
                     <tr>
-                        <th>Asignado</th>
-                        <th>Meses sin asignación</th>
+                        <th>Nombre</th>
+                        <th>Ultima asignación</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,8 +57,30 @@ include 'includes/index.html';
                     while ($alerta = mysqli_fetch_assoc($alertas)) {
                     ?>
                         <tr>
-                            <td> <a href="verPerfilVaron.php?idvarones=<?= $alerta['idvarones'] ?> " class="text-decoration-none" id="link"> <?= $alerta['nombre'] ?></a></td>
-                            <td><?= $alerta['fecha'] ?></td>
+                            <td> <a href="verPerfilVaron.php?idvarones=<?= $alerta['idvarones'] ?>"  id="link"> <?= $alerta['nombre'] ?></a></td>
+                            <?php
+                            if ($alerta['fecha'] == 0) {
+                            ?>
+                                <td>Hoy</td>
+                            <?php
+                            } else if ($alerta['fecha'] <= -2) {
+                            ?>
+                                <td>Será en <?= abs($alerta['fecha']) ?> días</td>
+                            <?php
+                            } else if ($alerta['fecha'] == -1) {
+                            ?>
+                                <td>Será en <?= abs($alerta['fecha']) ?> día</td>
+                            <?php
+                            } else if ($alerta['fecha'] == 1) {
+                            ?>
+                                <td>Hace <?= $alerta['fecha'] ?> día</td>
+                            <?php
+                            } else {
+                            ?>
+                                <td>Hace <?= $alerta['fecha'] ?> días</td>
+                            <?php
+                            }
+                            ?>
                         </tr>
                     <?php
                     }
@@ -74,7 +90,7 @@ include 'includes/index.html';
         </div>
 
         <div class="col-3">
-            <h3 class="text-center alert alert-info">No asignados</h3>
+            <h3 class="text-center alert alert-info mb-0">No asignados</h3>
             <table class="table table-hover table-borderless table-striped text-center">
                 <thead>
                     <tr>
@@ -82,13 +98,22 @@ include 'includes/index.html';
                     </tr>
                 </thead>
                 <tbody>
+
                     <?php
-                    while ($noAsignado = mysqli_fetch_assoc($noAsignados)) {
+                    if ($cantidad == 0) {
                     ?>
                         <tr>
-                            <td> <a href="verPerfilVaron.php?idvarones=<?= $noAsignado['idvarones'] ?> " class="text-decoration-none" id="link"><?= $noAsignado['nombre'] ?></a></td>
+                            <td class="text-success">Ningún matriculado quedó sin asignar</td>
                         </tr>
+                        <?php
+                    } else {
+                        while ($noAsignado = mysqli_fetch_assoc($noAsignados)) {
+                        ?>
+                            <tr>
+                                <td> <a href="verPerfilVaron.php?idvarones=<?= $noAsignado['idvarones'] ?> "  id="link"><?= $noAsignado['nombre'] ?></a></td>
+                            </tr>
                     <?php
+                        }
                     }
                     ?>
                 </tbody>
