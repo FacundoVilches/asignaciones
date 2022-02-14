@@ -6,7 +6,7 @@ include 'includes/index.html';
 <html style="height: 100%;">
 
 <body style="
-    background-color:#e3e3e3;
+    background-color:#cbcaca;
     height:100%;
     margin:0;
     padding: 0;
@@ -17,25 +17,21 @@ include 'includes/index.html';
     <div class="container text-center">
 
         <!-- <h1 class="m-4">INICIO</h1> -->
-        <div class="row">
-            <div class="row">
-                <div class="col">
-                    <a href="listaVarones.php" class="btn btn-lg btn-primary m-4">LISTA DE VARONES</a>
-                </div>
-                <div class="col">
-                    <a href="" class="btn btn-lg btn-danger  m-4">LISTA DE MUJERES</a>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col">
-                    <a href="listaInformesVarones.php" class="btn btn-lg btn-primary m-4">INFORMES DE VARONES</a>
-                </div>
-                <div class="col">
-                    <a href="" class="btn btn-lg btn-danger  m-4">INFORMES DE MUJERES</a>
-                </div>
-            </div>
+        <div class="col">
+        <a href="listaVarones.php" class="btn btn-lg btn-outline-primary m-4"><i class="fas me-3 fa-male"></i>LISTA DE VARONES</a>
         </div>
+        <div class="col">
+            <a href="listaMujeres.php" class="btn btn-lg btn-outline-danger m-4"><i class="fas me-3 fa-female"></i>LISTA DE MUJERES</a>
+        </div>
+        <hr>
+        <div class="col">
+            <a href="listaInformesVarones.php" class="btn btn-lg btn-outline-primary m-4"><i class="fas me-3 fa-list-ol"></i>INFORMES DE VARONES</a>
+        </div>
+        <div class="col">
+            <a href="listaInformesMujeres.php" class="btn btn-outline-danger btn-lg  m-4"><i class="fas me-3 fa-list-ol"></i>INFORMES DE MUJERES</a>
+        </div>
+
 
     </div>
 </body>

@@ -2,11 +2,10 @@
 
 require 'funciones/conexion.php';
 include 'includes/index.html';
-$nombre = $_POST['buscar'];
 $link = conectar();
-$sql =   "SELECT idvarones,nombre
-        FROM varones
-        WHERE nombre LIKE '%".$nombre."%'";
+$sql =   "SELECT idmujeres,nombre
+        FROM mujeres
+        WHERE nombre LIKE '%".$_POST['buscar']."%'";
 $resultado = mysqli_query($link, $sql)
     or die(mysqli_error($link));
 $cantidad = mysqli_num_rows($resultado);
@@ -33,7 +32,7 @@ if($cantidad == 0){
             <th>#</th>
             <th colspan="4">Nombre</th>
             <th colspan="">
-                <a href="formAgregarVaron.php" class="btn btn-outline-success btn-sm fw-bold"><i class="fas fa-plus"></i> Agregar</a>
+                <a href="formAgregarMujer.php" class="btn btn-outline-success btn-sm fw-bold"><i class="fas fa-plus"></i> Agregar</a>
             </th>
         </tr>
     </thead>
@@ -43,13 +42,13 @@ if($cantidad == 0){
         while ($resultados = mysqli_fetch_assoc($resultado)) {
         ?>
         <tr>
-                    <td><?= $resultados['idvarones'] ?></td>
-                    <td colspan="4"> <a href="verPerfilVaron.php?idvarones=<?= $resultados['idvarones'] ?>" id="link"><?= $resultados['nombre'] ?></a> </td>
+                    <td><?= $resultados['idmujeres'] ?></td>
+                    <td colspan="4"> <a href="verPerfilMujer.php?idmujeres=<?= $resultados['idmujeres'] ?>" id="link"><?= $resultados['nombre'] ?></a> </td>
                     <td>
-                        <a href="formModificarVaron.php?idvarones=<?= $resultados['idvarones'] ?>" class="btn btn-outline-primary btn-sm fw-bold"><i class="fas fa-marker"></i> Modificar</a>
+                        <a href="formModificarMujer.php?idmujeres=<?= $resultados['idmujeres'] ?>" class="btn btn-outline-primary btn-sm fw-bold"><i class="fas fa-marker"></i> Modificar</a>
                     </td>
                     <td>
-                        <a href="formEliminarVaron.php?idvarones=<?= $resultados['idvarones'] ?>" class="btn btn-outline-danger btn-sm fw-bold"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                        <a href="formEliminarMujer.php?idmujeres=<?= $resultados['idmujeres'] ?>" class="btn btn-outline-danger btn-sm fw-bold"><i class="fas fa-trash-alt"></i> Eliminar</a>
                     </td>
                 </tr>
         <?php

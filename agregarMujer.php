@@ -1,34 +1,28 @@
 <?php
-
 require 'funciones/conexion.php';
-require 'funciones/informesVarones.php';
-$chequeo = actualizarInforme();
+require 'funciones/mujeres.php';
+$chequeo = agregarMujer();
 include 'includes/index.html';
-
 ?>
 
 <main class="container m-5">
 
-    <h1 class="m-5">Modificación de un informe</h1>
+    <h1 class="m-5">Alta de una mujer</h1>
 
     <?php
-
     if ($chequeo == true) {
-
     ?>
-
         <div class="row alert alert-success mx-auto">
             <div class="col d-flex justify-content-center align-items-center">
-                <h3>Modificado correctamente!</h3>
+                <h3>Agregada correctamente!</h3>
             </div>
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaInformesVarones.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
+                <a href="listaMujeres.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>
-
     <?php
     } else {
     ?>
@@ -39,12 +33,11 @@ include 'includes/index.html';
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaInformesVarones.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
+                <a href="listaMujeres.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>
     <?php
     }
     ?>
-
 </main>

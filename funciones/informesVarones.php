@@ -100,7 +100,8 @@ function verInformePorID(){
                     sala,
                     observaciones 
             FROM informes_varones i,varones v
-            WHERE idinformes_varones =".$idInforme;
+            WHERE v.idvarones=i.idvarones
+            AND idinformes_varones =".$idInforme;
     $resultado = mysqli_query($link,$sql)
                     or die(mysqli_error($link));
     $informe = mysqli_fetch_assoc($resultado);

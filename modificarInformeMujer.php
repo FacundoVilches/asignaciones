@@ -1,7 +1,7 @@
 <?php
 
 require 'funciones/conexion.php';
-require 'funciones/informesVarones.php';
+require 'funciones/informesMujeres.php';
 $chequeo = actualizarInforme();
 include 'includes/index.html';
 
@@ -24,7 +24,7 @@ include 'includes/index.html';
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaInformesVarones.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
+                <a href="listaInformesMujeres.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>
@@ -39,7 +39,7 @@ include 'includes/index.html';
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaInformesVarones.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
+                <a href="listaInformesMujeres.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>

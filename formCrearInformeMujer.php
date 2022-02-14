@@ -1,8 +1,8 @@
 <?php
 
 require 'funciones/conexion.php';
-require 'funciones/varones.php';
-$perfil = verVaronID();
+require 'funciones/mujeres.php';
+$perfil = verMujerID();
 include 'includes/index.html';
 
 ?>
@@ -13,7 +13,7 @@ include 'includes/index.html';
     <div class="alert mx-auto d-flex justify-content-center">
 
         <div class="alert shadow col-10">
-            <form action="crearInformeVaron.php?idvarones=<?= $perfil['idvarones'] ?>" method="post">
+            <form action="crearInformeMujer.php?idmujeres=<?= $perfil['idmujeres'] ?>" method="post">
 
                 <div class="form-group">
                     <div class="row mx-auto d-flex justify-content-center">
@@ -25,11 +25,9 @@ include 'includes/index.html';
                             <label for="tema" id="negrita" class="m-2">Tema (*)</label>
                             <select name="tema" class="form-select" required>
                                 <option selected value="">Seleccione un tema</option>
-                                <option value="Lectura de la Biblia">Lectura de la Biblia</option>
                                 <option value="Primera conversación">Primera conversación</option>
                                 <option value="Revisita">Revisita</option>
                                 <option value="Curso bíblico">Curso bíblico</option>
-                                <option value="Discurso">Discurso</option>
                                 <option value="Otro">Otro</option>
                             </select>
 
@@ -52,15 +50,14 @@ include 'includes/index.html';
                         </div>
                     </div>
                 </div>
-                <input type="hidden" name="idvarones" value="<?= $perfil['idvarones'] ?>">
+                <input type="hidden" name="idmujeres" value="<?= $perfil['idmujeres'] ?>">
                 <div class="row m-2 d-flex justify-content-between">
                     <div class="col text-center">
                         <button class="btn btn-outline-success m-3"><i class="fas fa-check"></i> Agregar</button>
                     </div>
                     <div class="col text-center">
-                        <a href="verPerfilVaron.php?idvarones=<?=$perfil['idvarones']?>" class="btn btn-outline-secondary m-3"><i class="fas fa-arrow-left"></i> Volver</a>
-                    </div> 
-                    
+                        <a href="verPerfilMujer.php?idmujeres=<?=$perfil['idmujeres']?>" class="btn btn-outline-secondary m-3"><i class="fas fa-arrow-left"></i> Volver</a>
+                    </div>
                 </div>
             </form>
         </div>

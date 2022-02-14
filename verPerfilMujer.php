@@ -1,9 +1,9 @@
 <?php
 
 require 'funciones/conexion.php';
-require 'funciones/varones.php';
-require 'funciones/informesVarones.php';
-$perfil = verVaronID();
+require 'funciones/mujeres.php';
+require 'funciones/informesMujeres.php';
+$perfil = verMujerID();
 $historiales = verHistorial();
 $cantidad = cantidadAsignaciones();
 include 'includes/index.html';
@@ -14,13 +14,13 @@ include 'includes/nav.html';
 <main class="container col-12">
     <div class="row p-4">
         <div class="col">
-            <a href="listaVarones.php" class="btn btn-outline-secondary btn-sm fw-bold"><i class="fas fa-arrow-left"></i> Volver</a>
+            <a href="listaMujeres.php" class="btn btn-outline-secondary btn-sm fw-bold"><i class="fas fa-arrow-left"></i> Volver</a>
         </div>
     </div>
     <h1 class="m-4">Perfil</h1>
     <div class="row">
         <div class="col-6 mx-auto centrado">
-            <img src="img/usuarioVaron.jpg" id="foto-perfil" class="border-radius img-fluid" alt="">
+            <img src="img/usuarioMujer.jpg" id="foto-perfil" class="border-radius img-fluid" alt="">
         </div>
     </div>
     <div class="row mx-auto">
@@ -36,7 +36,7 @@ include 'includes/nav.html';
                 <tbody>
                     <tr class="d-flex justify-content-around">
                         <td class="col-4 text-center">
-                            <h5><?= $perfil['idvarones'] ?></h5>
+                            <h5><?= $perfil['idmujeres'] ?></h5>
                         </td>
                         <td class="col-4 text-center">
                             <h5><?= $perfil['nombre'] ?></h5>
@@ -60,8 +60,8 @@ include 'includes/nav.html';
                 </tbody>
             </table>
             <div class="d-flex justify-content-between m-5">
-                <a href="formModificarVaron.php?idvarones=<?= $perfil['idvarones'] ?> " class="btn btn-outline-primary btn-md fw-bold"><i class="fas fa-marker"></i> Modificar</a>
-                <a href="formEliminarVaron.php?idvarones=<?= $perfil['idvarones'] ?>" class="btn btn-outline-danger btn-md fw-bold"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                <a href="formModificarMujer.php?idmujeres=<?= $perfil['idmujeres'] ?> " class="btn btn-outline-primary btn-md fw-bold"><i class="fas fa-marker"></i> Modificar</a>
+                <a href="formEliminarMujer.php?idmujeres=<?= $perfil['idmujeres'] ?>" class="btn btn-outline-danger btn-md fw-bold"><i class="fas fa-trash-alt"></i> Eliminar</a>
             </div>
 
         </div>
@@ -73,7 +73,7 @@ include 'includes/nav.html';
             <h1 class="">Historial de asignaciones - Cantidad: <?= $cantidad ?></h1>
         </div>
         <div class="col-3 d-flex justify-content-center align-items-center">
-            <a href="formCrearInformeVaron.php?idvarones=<?= $perfil['idvarones'] ?> " class="btn btn-outline-success btn-md fw-bold"><i class="fas fa-plus"></i> Crear informe</a>
+            <a href="formCrearInformeMujer.php?idmujeres=<?= $perfil['idmujeres'] ?> " class="btn btn-outline-success btn-md fw-bold"><i class="fas fa-plus"></i> Crear informe</a>
         </div>
 
 
@@ -110,7 +110,7 @@ include 'includes/nav.html';
 
                             <tr class="d-flex justify-content-around">
                                 <td class="col-1 text-center">
-                                    <h5><?= $historial['idinformes_varones'] ?></h5>
+                                    <h5><?= $historial['idinformes_mujeres'] ?></h5>
                                 </td>
                                 <td class="col-2 text-center">
                                     <h5><?= $historial['fecha'] ?></h5>
@@ -128,7 +128,7 @@ include 'includes/nav.html';
                                         <h5 class="text-success font-weight-bold">SÍ hay</h5>
                                     </td>
                                     <td class="col-1">
-                                        <a href="verInformeVaron.php?idinformes_varones=<?= $historial['idinformes_varones'] ?> " class="btn btn-outline-dark btn-sm fw-bold"><i class="fas fa-eye"></i> Ver</a>
+                                        <a href="verInformeVaron.php?idinformes_mujeres=<?= $historial['idinformes_mujeres'] ?> " class="btn btn-outline-dark btn-sm fw-bold"><i class="fas fa-eye"></i> Ver</a>
                                     </td>
                                 <?php
                                 } else {
@@ -137,7 +137,7 @@ include 'includes/nav.html';
                                         <h5 class="text-danger font-weight-bold">NO hay</h5>
                                     </td>
                                     <td class="col-1">
-                                        <a href="verInformeVaron.php?idinformes_varones=<?= $historial['idinformes_varones'] ?> " class="btn btn-outline-dark btn-sm fw-bold"> <i class="fas fa-eye"></i> Ver</a>
+                                        <a href="verInformeMujer.php?idinformes_mujeres=<?= $historial['idinformes_mujeres'] ?> " class="btn btn-outline-dark btn-sm fw-bold"> <i class="fas fa-eye"></i> Ver</a>
                                     </td>
                                 <?php
                                 }

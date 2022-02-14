@@ -1,15 +1,17 @@
 <?php
 
 require 'funciones/conexion.php';
-require 'funciones/informesVarones.php';
-$chequeo = actualizarInforme();
+require 'funciones/informesMujeres.php';
+require 'funciones/mujeres.php';
+$chequeo = agregarInforme();
+$perfil = verMujerID();
 include 'includes/index.html';
 
 ?>
 
 <main class="container m-5">
 
-    <h1 class="m-5">Modificación de un informe</h1>
+    <h1 class="m-5">Agregar informe</h1>
 
     <?php
 
@@ -17,14 +19,14 @@ include 'includes/index.html';
 
     ?>
 
-        <div class="row alert alert-success mx-auto">
+<div class="row alert alert-success mx-auto">
             <div class="col d-flex justify-content-center align-items-center">
-                <h3>Modificado correctamente!</h3>
+                <h3>Agregado correctamente!</h3>
             </div>
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaInformesVarones.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
+                <a href="verPerfilMujer.php?idmujeres=<?= $perfil['idmujeres'] ?>" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>
@@ -39,7 +41,7 @@ include 'includes/index.html';
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaInformesVarones.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
+                <a href="verPerfilMujer.php?idmujeres=<?= $perfil['idmujeres'] ?>" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>
