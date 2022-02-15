@@ -19,7 +19,7 @@ include 'includes/index.html';
         <!-- <h1 class="m-4">INICIO</h1> -->
 
         <div class="col">
-        <a href="listaVarones.php" class="btn btn-lg btn-outline-primary m-4"><i class="fas me-3 fa-male"></i>LISTA DE VARONES</a>
+            <a href="listaVarones.php" class="btn btn-lg btn-outline-primary m-4"><i class="fas me-3 fa-male"></i>LISTA DE VARONES</a>
         </div>
         <div class="col">
             <a href="listaMujeres.php" class="btn btn-lg btn-outline-danger m-4"><i class="fas me-3 fa-female"></i>LISTA DE MUJERES</a>
@@ -29,7 +29,11 @@ include 'includes/index.html';
             <a href="listaInformesVarones.php" class="btn btn-lg btn-outline-primary m-4"><i class="fas me-3 fa-list-ol"></i>INFORMES DE VARONES</a>
         </div>
         <div class="col">
-            <a href="listaInformesMujeres.php" class="btn btn-outline-danger btn-lg  m-4"><i class="fas me-3 fa-list-ol"></i>INFORMES DE MUJERES</a>
+            <a href="listaInformesMujeres.php" class="btn btn-outline-danger btn-lg m-4"><i class="fas me-3 fa-list-ol"></i>INFORMES DE MUJERES</a>
+        </div>
+        <hr>
+        <div class="col">
+            <a href="config.php" class="btn btn-outline-secondary btn-lg m-4"><i class="fa-solid me-3 fa-wrench"></i>AJUSTES</a>
         </div>
 
 

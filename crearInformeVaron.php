@@ -18,18 +18,31 @@ include 'includes/index.html';
     if ($chequeo == true) {
 
     ?>
-
-        <div class="alert alert-success mx-auto">
-            Agregado correctamente
-            <a href="verPerfilVaron.php?idvarones=<?= $perfil['idvarones'] ?> " class="btn btn-light m-2">Volver</a>
+        <div class="row alert alert-success mx-auto">
+            <div class="col d-flex justify-content-center align-items-center">
+                <h3>Agregado correctamente!</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-end align-items-center">
+                <a href="verPerfilVaron.php?idvarones=<?= $perfil['idvarones'] ?> " class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
+                </a>
+            </div>
         </div>
 
     <?php
     } else {
     ?>
-        <div class="alert alert-danger mx-auto">
-            Error!
-            <a href="verPerfilVaron.php?idvarones=<?= $perfil['idvarones'] ?> " class="btn btn-light m-2">Volver</a>
+        <div class="row alert alert-danger mx-auto">
+            <div class="col d-flex justify-content-center align-items-center">
+                <h3>Error!</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-end align-items-center">
+                <a href="verPerfilVaron.php?idvarones=<?= $perfil['idvarones'] ?> " class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
+                </a>
+            </div>
         </div>
     <?php
     }

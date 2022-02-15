@@ -22,7 +22,9 @@ $varones = listarVarones();
                 </div>
             </div>
         </div>
-        <div class="p-0" id="resultadoBuscador"></div>
+        <div class="p-0" id="resultadoBuscador">
+            
+        </div>
         <table id="total" class="table table-hover table-borderless table-striped text-center">
             <thead>
                 <tr>
