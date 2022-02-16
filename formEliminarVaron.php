@@ -26,13 +26,13 @@ include 'includes/index.html';
                 <input type="hidden" name="idvarones" value="<?= $datos['idvarones'] ?>">
                 <div class="row mx-auto d-flex justify-content-between m-3">
                     <div class="col text-center">
-                        <button class="btn btn-outline-danger m-3"><i class="fas fa-check"></i> Eliminar</button>
+                        <button class="btn btn-outline-danger m-3 btn-md fw-bold"><i class="fas fa-check"></i> Eliminar</button>
                     </div>
                     <div class="col text-center">
-                        <a href="verPerfilVaron.php?idvarones=<?= $datos['idvarones'] ?>" class="btn btn-outline-secondary btn-md m-3"><i class="fas fa-arrow-left"></i> Volver a perfil</a>
+                        <a href="verPerfilVaron.php?idvarones=<?= $datos['idvarones'] ?>" class="btn btn-outline-secondary btn-md fw-bold m-3"><i class="fas fa-arrow-left"></i> Volver a perfil</a>
                     </div>
                     <div class="col text-center">
-                        <a href="listaVarones.php" class="btn btn-md btn-outline-secondary m-3"><i class="fas fa-arrow-left"></i> Volver a lista</a>
+                        <a href="listaVarones.php" class="btn btn-md fw-bold btn-outline-secondary m-3"><i class="fas fa-arrow-left"></i> Volver a lista</a>
                     </div>
                 </div>
             </form>
@@ -43,13 +43,13 @@ include 'includes/index.html';
                 <input type="hidden" name="idvarones" value="<?= $datos['idvarones'] ?>">
                 <div class="row mx-auto d-flex justify-content-between m-3">
                     <div class="col text-center">
-                        <button class="btn btn-outline-danger m-3"><i class="fas fa-check"></i> Eliminar</button>
+                        <button class="btn btn-outline-danger m-3 btn-md fw-bold"><i class="fas fa-check"></i> Eliminar</button>
                     </div>
                     <div class="col text-center">
-                        <a href="verPerfilVaron.php?idvarones=<?= $datos['idvarones'] ?>" class="btn btn-outline-secondary btn-md m-3"><i class="fas fa-arrow-left"></i> Volver a perfil</a>
+                        <a href="verPerfilVaron.php?idvarones=<?= $datos['idvarones'] ?>" class="btn btn-outline-secondary btn-md fw-bold m-3"><i class="fas fa-arrow-left"></i> Volver a perfil</a>
                     </div>
                     <div class="col text-center">
-                        <a href="listaVarones.php" class="btn btn-md btn-outline-secondary m-3"><i class="fas fa-arrow-left"></i> Volver a lista</a>
+                        <a href="listaVarones.php" class="btn btn-md fw-bold btn-outline-secondary m-3"><i class="fas fa-arrow-left"></i> Volver a lista</a>
                     </div>
                 </div>
             </form>

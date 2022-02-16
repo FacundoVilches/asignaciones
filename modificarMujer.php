@@ -24,7 +24,7 @@ include 'includes/index.html';
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaMujeres.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
+                <a href="listaMujeres.php" class="btn btn-outline-secondary btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>
@@ -39,7 +39,7 @@ include 'includes/index.html';
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaMujeres.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
+                <a href="listaMujeres.php" class="btn btn-outline-secondary btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>

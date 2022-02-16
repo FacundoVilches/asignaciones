@@ -32,7 +32,11 @@ include 'includes/index.html';
                 <span id="negrita">Fecha:</span>
             </div>
             <div class="col d-flex justify-content-start align-items-center">
-                <span id="negrita"><?= $informe['fecha'] ?></span>
+                <span id="negrita"><?php
+                                    $informe['fecha'];
+                                    $convertir = strtotime($informe['fecha']);
+                                    $nuevoFormato = date('d-m-Y', $convertir);
+                                    echo $nuevoFormato; ?></span>
             </div>
         </div>
         <div class="row m-3">

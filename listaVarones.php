@@ -6,7 +6,7 @@ require 'funciones/varones.php';
 $varones = listarVarones();
 ?>
 
-<div class="container">
+<div class="container" >
 
     <div class="row p-0">
         <div class="col">

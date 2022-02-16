@@ -15,23 +15,24 @@ include 'includes/index.html';
                 <div class="form-group">
                     <div class="row d-flex justify-content-center">
                         <div class="col-6 m-3">
-                            <label for="nombre">Nombre (*)</label>
-                            <input type="text" name="nombre" class="form-control" required>
+                            <label class="m-2" id="negrita" for="nombre">Nombre (*)</label>
+                            <input id="validacionNombre" type="text" name="nombre" class="form-control" required>
+                            <span id="respuesta"></span>
                         </div>
                     </div>
                     <div class="row d-flex justify-content-center">
                         <div class="col-6 m-3">
-                            <label for="contacto">Contacto</label>
+                            <label class="m-2" id="negrita" for="contacto">Contacto</label>
                             <input type="text" name="contacto" class="form-control">
                         </div>
                     </div>
                 </div>
-                <div class="row mx-auto d-flex justify-content-between">
+                <div class="row m-3 mx-auto d-flex justify-content-between">
                     <div class="col text-center">
-                        <button class="btn btn-outline-success m-3"><i class="fas fa-check"></i> Agregar</button>
+                        <button class="btn btn-outline-success m-3 btn-md fw-bold"><i class="fas fa-check"></i> Agregar</button>
                     </div>
                     <div class="col text-center">
-                        <a href="listaMujeres.php" class="btn btn-outline-secondary m-3"><i class="fas fa-arrow-left"></i> Volver</a>
+                        <a href="listaMujeres.php" class="btn btn-outline-secondary m-3 btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver</a>
                     </div>
                 </div>
 
@@ -40,3 +41,25 @@ include 'includes/index.html';
         </div>
     </div>
 </main>
+
+<script>
+$("#validacionNombre").keyup(function () {
+    var nombre = $(this).val();
+    $.ajax({
+      url: "verificarNombreMujer.php",
+      method: "POST",
+      data: {
+        nombreMujer: nombre,
+      },
+      datatype: "text",
+      success: function (datos) {
+        $("#respuesta").html(datos);
+        if ($("#respuesta").children().length != 0) {
+          $("#btn").attr("disabled", true);
+        } else {
+          $("#btn").attr("disabled", false);
+        }
+      },
+    });
+  });
+</script>

@@ -1,27 +1,28 @@
 <?php
 
-require 'funciones/conexion.php';
-require 'funciones/mujeres.php';
-$chequeo = eliminarMujerConInformes();
 include 'includes/index.html';
+require 'funciones/config.php';
+require 'funciones/conexion.php';
+$chequeo = borrarVarones();
+
 
 ?>
 
 <div class="container m-5">
 
-    <h1 class="m-5">Baja de mujer matriculada</h1>
+    <h1 class="m-5">Baja de lista de varones</h1>
 
     <?php
-    if ($chequeo) {
+    if($chequeo){
     ?>
         <div class="row alert alert-success mx-auto">
             <div class="col d-flex justify-content-center align-items-center">
-                <h3>Eliminada correctamente!</h3>
+                <h3>Eliminado correctamente!</h3>
             </div>
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaMujeres.php" class="btn btn-outline-secondary btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver
+                <a href="config.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>
@@ -35,7 +36,7 @@ include 'includes/index.html';
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaMujeres.php" class="btn btn-outline-secondary btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver
+                <a href="config.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>

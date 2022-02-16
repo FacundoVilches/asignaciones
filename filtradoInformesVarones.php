@@ -61,7 +61,7 @@ if($filtrados==0){
 <h5 class="m-2 p-2">Resultados encontrados: </h5>
             <div class="col-5">
 
-                <table id="respuesta" class="table table-hover table-borderless table-striped text-center">
+                <table class="table table-hover table-borderless table-striped text-center">
                     <thead>
                         <tr>
                             <th>#</th>
