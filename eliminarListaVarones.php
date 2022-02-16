@@ -22,7 +22,7 @@ $chequeo = borrarVarones();
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="config.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
+                <a href="ajustes.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>
@@ -36,7 +36,7 @@ $chequeo = borrarVarones();
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="config.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
+                <a href="ajustes.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>

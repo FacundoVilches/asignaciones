@@ -88,10 +88,10 @@ include 'includes/index.html';
                 <input type="hidden" name="idmujeres" value="<?= $datos['idmujeres'] ?>">
                 <div class="row m-2 d-flex justify-content-between">
                     <div class="col text-center">
-                        <button class="btn btn-outline-success m-3"><i class="fas fa-check"></i> Confirmar</button>
+                        <button class="btn btn-outline-success m-3 btn-md fw-bold"><i class="fas fa-check"></i> Confirmar</button>
                     </div>
                     <div class="col text-center">
-                        <a href="verInformeMujer.php?idinformes_mujeres=<?= $datos['idinformes_mujeres'] ?>" class="btn btn-outline-secondary m-3"><i class="fas fa-arrow-left"></i> Volver</a>
+                        <a href="verInformeMujer.php?idinformes_mujeres=<?= $datos['idinformes_mujeres'] ?>" class="btn btn-outline-secondary m-3 btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver</a>
                     </div>
 
                 </div>

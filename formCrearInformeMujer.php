@@ -53,10 +53,10 @@ include 'includes/index.html';
                 <input type="hidden" name="idmujeres" value="<?= $perfil['idmujeres'] ?>">
                 <div class="row m-2 d-flex justify-content-between">
                     <div class="col text-center">
-                        <button class="btn btn-outline-success m-3"><i class="fas fa-check"></i> Agregar</button>
+                        <button class="btn btn-outline-success m-3 btn-md fw-bold"><i class="fas fa-check"></i> Agregar</button>
                     </div>
                     <div class="col text-center">
-                        <a href="verPerfilMujer.php?idmujeres=<?=$perfil['idmujeres']?>" class="btn btn-outline-secondary m-3"><i class="fas fa-arrow-left"></i> Volver</a>
+                        <a href="verPerfilMujer.php?idmujeres=<?=$perfil['idmujeres']?>" class="btn btn-outline-secondary m-3 btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver</a>
                     </div>
                 </div>
             </form>

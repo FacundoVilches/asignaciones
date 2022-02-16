@@ -20,14 +20,14 @@ include 'includes/nav.html';
     </div>
     <hr>
     <div class="col text-center">
-        <a href="formEliminarListaV.php" class="btn btn-lg btn-outline-primary m-4"><i class="fa-solid me-3 fa-circle-minus"></i>ELIMINAR INFORMES DE VARONES</a>
+        <a href="formEliminarInformesV.php" class="btn btn-lg btn-outline-primary m-4"><i class="fa-solid me-3 fa-circle-minus"></i>ELIMINAR INFORMES DE VARONES</a>
     </div>
     <div class="col text-center">
-        <a href="formEliminarListaM.php" class="btn btn-outline-danger btn-lg m-4"><i class="fa-solid me-3 fa-circle-minus"></i>ELIMINAR INFORMES DE MUJERES</a>
+        <a href="formEliminarInformesM.php" class="btn btn-outline-danger btn-lg m-4"><i class="fa-solid me-3 fa-circle-minus"></i>ELIMINAR INFORMES DE MUJERES</a>
     </div>
     <hr>
     <div class="col text-center">
-        <a href="config.php" class="btn btn-outline-dark btn-lg m-4"><i class="fa-solid me-3 fa-power-off"></i>REINICIAR EL SISTEMA</a>
+        <a href="formReset.php" class="btn btn-outline-dark btn-lg m-4"><i class="fa-solid me-3 fa-power-off"></i>REINICIAR EL SISTEMA</a>
     </div>
     <div class="col alert alert-info mt-4 text-center">
         Ante cualquier inconveniente, comunicarse con el desarrollador <i class="fa-solid fa-circle-exclamation"></i>

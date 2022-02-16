@@ -76,13 +76,16 @@ include 'includes/index.html';
             <input type="hidden" name="idinformes_varones" value="<?= $datos['idinformes_varones'] ?>">
             <div class="row">
                 <div class="col text-center">
-                    <button class="btn btn-outline-danger"><i class="fas fa-check"></i> Eliminar</button>
+                    <button class="btn btn-outline-danger btn-md fw-bold"><i class="fas fa-check"></i> Eliminar</button>
                 </div>
                 <div class="col text-center">
-                    <a href="verPerfilVaron.php?idvarones=<?= $datos['idvarones'] ?>" class="btn btn-outline-secondary btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver a perfil</a>
+                    <a href="verInformeVaron.php?idinformes_varones=<?= $datos['idvarones'] ?>" class="btn btn-outline-secondary btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver a ver informe</a>
                 </div>
                 <div class="col text-center">
-                    <a href="listaInformesVarones.php" class="btn btn-outline-secondary btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver a informes</a>
+                    <a href="verPerfilVaron.php?idvarones=<?= $datos['idvarones'] ?>" class="btn btn-outline-secondary btn-md fw-bold"><i class="fas fa-arrow-left"></i> Ir a perfil</a>
+                </div>
+                <div class="col text-center">
+                    <a href="listaInformesVarones.php" class="btn btn-outline-secondary btn-md fw-bold"><i class="fas fa-arrow-left"></i> Ir a informes</a>
                 </div>
             </div>
 

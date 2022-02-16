@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-02-2022 a las 07:08:25
+-- Tiempo de generación: 17-02-2022 a las 00:15:06
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.15
 
@@ -20,6 +20,36 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `barriogodoy`
 --
+
+DELIMITER $$
+--
+-- Procedimientos
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `borrarListaMujeres` ()  BEGIN
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE mujeres;
+TRUNCATE TABLE informes_mujeres;
+SET FOREIGN_KEY_CHECKS = 1;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `borrarListaVarones` ()  BEGIN
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE mujeres;
+TRUNCATE TABLE informes_mujeres;
+SET FOREIGN_KEY_CHECKS = 1;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `resetDatabase` ()  BEGIN
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE mujeres;
+TRUNCATE TABLE varones;
+TRUNCATE TABLE informes_mujeres;
+TRUNCATE TABLE informes_varones;
+SET FOREIGN_KEY_CHECKS = 1;
+
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 

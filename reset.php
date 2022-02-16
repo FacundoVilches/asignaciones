@@ -1,27 +1,28 @@
 <?php
 
-require 'funciones/conexion.php';
-require 'funciones/varones.php';
-$chequeo = eliminarVaronConInformes();
 include 'includes/index.html';
+require 'funciones/config.php';
+require 'funciones/conexion.php';
+$chequeo = resetDatabase();
+
 
 ?>
 
 <div class="container m-5">
 
-    <h1 class="m-5">Baja de varón matriculado</h1>
+    <h1 class="m-5">Reiniciar sistema</h1>
 
     <?php
-        if($chequeo){
+    if($chequeo){
     ?>
         <div class="row alert alert-success mx-auto">
             <div class="col d-flex justify-content-center align-items-center">
-                <h3>Eliminado correctamente!</h3>
+                <h3>Reiniciado correctamente!</h3>
             </div>
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaVarones.php" class="btn btn-outline-secondary btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver
+                <a href="ajustes.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>
@@ -35,7 +36,7 @@ include 'includes/index.html';
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaVarones.php" class="btn btn-outline-secondary btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver
+                <a href="ajustes.php" class="btn btn-outline-secondary"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>

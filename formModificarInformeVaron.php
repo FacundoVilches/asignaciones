@@ -22,7 +22,7 @@ include 'includes/index.html';
                             <label for="tema" id="negrita" class="m-2">Tema (*)</label>
                             <select name="tema" class="form-select" required>
                                 <?php
-                                if($datos['tema'] == "Lectura de la Biblia"){
+                                if ($datos['tema'] == "Lectura de la Biblia") {
                                 ?>
                                     <option selected value="<?= $datos['tema'] ?>"><?= $datos['tema'] ?></option>
                                     <option value="Primera conversación">Primera conversación</option>
@@ -31,7 +31,7 @@ include 'includes/index.html';
                                     <option value="Discurso">Discurso</option>
                                     <option value="Otro">Otro</option>
                                 <?php
-                                } else if($datos['tema'] == "Primera conversación"){
+                                } else if ($datos['tema'] == "Primera conversación") {
                                 ?>
                                     <option value="Lectura de la Biblia">Lectura de la Biblia</option>
                                     <option selected value="<?= $datos['tema'] ?>"><?= $datos['tema'] ?></option>
@@ -40,7 +40,7 @@ include 'includes/index.html';
                                     <option value="Discurso">Discurso</option>
                                     <option value="Otro">Otro</option>
                                 <?php
-                                } else if($datos['tema'] == "Revisita"){
+                                } else if ($datos['tema'] == "Revisita") {
                                 ?>
                                     <option value="Lectura de la Biblia">Lectura de la Biblia</option>
                                     <option value="Primera conversación">Primera conversación</option>
@@ -49,7 +49,7 @@ include 'includes/index.html';
                                     <option value="Discurso">Discurso</option>
                                     <option value="Otro">Otro</option>
                                 <?php
-                                } else if($datos['tema'] == "Curso bíblico"){
+                                } else if ($datos['tema'] == "Curso bíblico") {
                                 ?>
                                     <option value="Lectura de la Biblia">Lectura de la Biblia</option>
                                     <option value="Primera conversación">Primera conversación</option>
@@ -58,7 +58,7 @@ include 'includes/index.html';
                                     <option value="Discurso">Discurso</option>
                                     <option value="Otro">Otro</option>
                                 <?php
-                                } else if($datos['tema'] == "Discurso"){
+                                } else if ($datos['tema'] == "Discurso") {
                                 ?>
                                     <option value="Lectura de la Biblia">Lectura de la Biblia</option>
                                     <option value="Primera conversación">Primera conversación</option>
@@ -67,7 +67,7 @@ include 'includes/index.html';
                                     <option selected value="<?= $datos['tema'] ?>"><?= $datos['tema'] ?></option>
                                     <option value="Otro">Otro</option>
                                 <?php
-                                } else if($datos['tema'] == "Otro") {
+                                } else if ($datos['tema'] == "Otro") {
                                 ?>
                                     <option value="Lectura de la Biblia">Lectura de la Biblia</option>
                                     <option value="Primera conversación">Primera conversación</option>
@@ -112,10 +112,14 @@ include 'includes/index.html';
                 </div>
                 <input type="hidden" name="idinformes_varones" value="<?= $datos['idinformes_varones'] ?>">
                 <div class="row m-2">
-                    <div class="col">
-                        <button class="btn btn-outline-success m-3"><i class="fas fa-check"></i> Confirmar</button>
-                        <a href="verInformeVaron.php?idinformes_varones=<?= $datos['idinformes_varones'] ?>" class="btn btn-outline-secondary m-3"><i class="fas fa-arrow-left"></i> Volver</a>
+                    <div class="col text-center">
+                        <button class="btn btn-outline-success m-3 btn-md fw-bold"><i class="fas fa-check"></i> Confirmar</button>
                     </div>
+                    <div class="col text-center">
+                        <a href="verInformeVaron.php?idinformes_varones=<?= $datos['idinformes_varones'] ?>" class="btn btn-outline-secondary m-3 btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver</a>
+                    </div>
+
+
                 </div>
             </form>
 

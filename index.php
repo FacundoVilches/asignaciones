@@ -33,7 +33,7 @@ include 'includes/index.html';
         </div>
         <hr>
         <div class="col">
-            <a href="config.php" class="btn btn-outline-secondary btn-lg m-4"><i class="fa-solid me-3 fa-wrench"></i>AJUSTES</a>
+            <a href="ajustes.php" class="btn btn-outline-secondary btn-lg m-4"><i class="fa-solid me-3 fa-wrench"></i>AJUSTES</a>
         </div>
 
 

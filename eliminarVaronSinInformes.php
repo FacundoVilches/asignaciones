@@ -21,8 +21,7 @@ include 'includes/index.html';
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaVarones.php" class="btn btn-outline-secondary btn-md fw-bold">
-                    Volver
+                <a href="listaVarones.php" class="btn btn-outline-secondary btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>
@@ -36,8 +35,7 @@ include 'includes/index.html';
         </div>
         <div class="row">
             <div class="col d-flex justify-content-end align-items-center">
-                <a href="listaVarones.php" class="btn btn-outline-secondary btn-md fw-bold">
-                    Volver
+                <a href="listaVarones.php" class="btn btn-outline-secondary btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver
                 </a>
             </div>
         </div>

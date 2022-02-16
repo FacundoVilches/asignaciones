@@ -6,13 +6,13 @@ include 'includes/index.html';
 
 <main class="container m-5">
 
-    <h1 class="m-5">Baja de lista de varones</h1>
+    <h1 class="m-5">Baja de informes de mujeres</h1>
 
     <div class="alert shadow">
-        <h1 class="m-5 text-center text-danger"><i class="fa-solid fa-triangle-exclamation"></i> Se eliminarán a todos los varones matriculados <i class="fa-solid fa-triangle-exclamation"></i></h1>
+        <h1 class="m-5 text-center text-danger"><i class="fa-solid fa-triangle-exclamation"></i> Se eliminarán todos los informes de mujeres <i class="fa-solid fa-triangle-exclamation"></i></h1>
         <h1 class="m-5 text-center text-danger">¿Eliminar de todos modos?</h1>
 
-        <form action="eliminarListaVarones.php" method="post">
+        <form action="eliminarInformesMujeres.php" method="post">
             <div class="row">
                 <div class="col text-center">
                     <button class="btn btn-outline-danger btn-md fw-bold"><i class="fa-solid fa-check"></i> Confirmar</button>
