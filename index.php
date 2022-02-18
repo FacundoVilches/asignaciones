@@ -1,43 +1,41 @@
 <?php
-
+require 'sesion/config.php';
 include 'includes/index.html';
+include 'includes/nav.php';
 
 ?>
-<html style="height: 100%;">
 
-<body style="
-    background-color:#cbcaca;
-    height:100%;
-    margin:0;
-    padding: 0;
-    display:flex;
-    justify-content:center;
-    align-items:center;">
+<main class="container m-5">
 
-    <div class="container text-center">
+       <h1 class="m-5">Ingreso a sistema</h1>
 
-        <!-- <h1 class="m-4">INICIO</h1> -->
+       <div class="alert bg-light p-4 col-8 mx-auto shadow">
+              <div>
+                     <form action="login.php" method="post" class="mb-2">
 
-        <div class="col">
-            <a href="listaVarones.php" class="btn btn-lg btn-outline-primary m-4"><i class="fas me-3 fa-male"></i>LISTA DE VARONES</a>
-        </div>
-        <div class="col">
-            <a href="listaMujeres.php" class="btn btn-lg btn-outline-danger m-4"><i class="fas me-3 fa-female"></i>LISTA DE MUJERES</a>
-        </div>
-        <hr>
-        <div class="col">
-            <a href="listaInformesVarones.php" class="btn btn-lg btn-outline-primary m-4"><i class="fas me-3 fa-list-ol"></i>INFORMES DE VARONES</a>
-        </div>
-        <div class="col">
-            <a href="listaInformesMujeres.php" class="btn btn-outline-danger btn-lg m-4"><i class="fas me-3 fa-list-ol"></i>INFORMES DE MUJERES</a>
-        </div>
-        <hr>
-        <div class="col">
-            <a href="ajustes.php" class="btn btn-outline-secondary btn-lg m-4"><i class="fa-solid me-3 fa-wrench"></i>AJUSTES</a>
-        </div>
-
-
-    </div>
-</body>
-
-</html>
+                            <label for="username">Nombre de usuario</label>
+                            <input type="text" name="username" class='form-control' id="username" required>
+                            <br>
+                            <label for="clave">Contraseña</label>
+                            <input type="password" name="clave" class='form-control' id="clave" required>
+                            <br>
+                            <button class="btn btn-outline-success m-3 btn-md fw-bold"><i class="fa-solid fa-arrow-right-to-bracket"></i> Ingresar
+                            </button>
+                     </form>
+              </div>
+              <?php
+              if (isset($_GET['error']) && $_GET['error'] == 1) {
+              ?>
+                     <div class="alert alert-danger col-12 mx-auto">
+                            Nombre y/o contraseña incorrectas
+                     </div>
+              <?php
+              } else if (isset($_GET['error']) && $_GET['error'] == 2) {
+              ?>
+                     <div class="alert alert-danger col-12 mx-auto">
+                            Debe iniciar sesión
+                     </div>
+              <?php
+              }
+              ?>
+</main>

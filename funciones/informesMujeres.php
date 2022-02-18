@@ -106,7 +106,7 @@ function informesAlerta() {
             WHERE m.idmujeres = i.idmujeres
             GROUP BY nombre
             ORDER BY fecha DESC
-            LIMIT 10;";
+            LIMIT 20;";
     $resultado = mysqli_query($link,$sql)
                     or die(mysqli_error($link));
     return $resultado;

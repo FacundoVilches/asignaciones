@@ -1,5 +1,7 @@
 <?php
-
+require 'sesion/config.php';
+require 'funciones/autenticacion.php';
+autenticar();
 require 'funciones/conexion.php';
 require 'funciones/mujeres.php';
 require 'funciones/informesMujeres.php';
@@ -7,7 +9,7 @@ $perfil = verMujerID();
 $historiales = verHistorial();
 $cantidad = cantidadAsignaciones();
 include 'includes/index.html';
-include 'includes/nav.html';
+include 'includes/nav.php';
 
 ?>
 
@@ -154,3 +156,6 @@ include 'includes/nav.html';
     <br>
 
 </main>
+<?php
+    include 'includes/footer.php';
+?>

@@ -1,9 +1,12 @@
 <?php
-include 'includes/index.html';
-include 'includes/nav.html';
+require 'sesion/config.php';
+require 'funciones/autenticacion.php';
+autenticar();
 require 'funciones/conexion.php';
 require 'funciones/varones.php';
 $varones = listarVarones();
+include 'includes/index.html';
+include 'includes/nav.php';
 ?>
 
 <div class="container" >
@@ -78,6 +81,7 @@ $varones = listarVarones();
             })
         }
     </script>
-    </body>
-
-    </html>
+</div>
+<?php
+    include 'includes/footer.php';
+?>

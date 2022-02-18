@@ -1,12 +1,15 @@
 <?php
-include 'includes/index.html';
-include 'includes/nav.html';
+require 'sesion/config.php';
+require 'funciones/autenticacion.php';
+autenticar();
 require 'funciones/conexion.php';
 require 'funciones/mujeres.php';
 $mujeres = listarMujeres();
+include 'includes/index.html';
+include 'includes/nav.php';
 ?>
 
-<div class="container">
+<main class="container">
 
     <div class="row p-0">
         <div class="col">
@@ -14,12 +17,12 @@ $mujeres = listarMujeres();
         </div>
         <div class="col my-auto">
 
-        <div class="row d-flex justify-content-end align-items-center m-0">
+            <div class="row d-flex justify-content-end align-items-center m-0">
                 <div class="col-6 d-flex justify-content-end text-secondary p-0">
-                <input onkeyup="buscador($('#buscar').val());" type="text" id="buscar" class="form-control" placeholder="Insertar nombre o apellido">
+                    <input onkeyup="buscador($('#buscar').val());" type="text" id="buscar" class="form-control" placeholder="Insertar nombre o apellido">
                 </div>
                 <div class="col-1">
-                <i class="text-secondary fas fa-search"></i>
+                    <i class="text-secondary fas fa-search"></i>
                 </div>
             </div>
         </div>
@@ -77,6 +80,8 @@ $mujeres = listarMujeres();
             })
         }
     </script>
-    </body>
 
-    </html>
+</main>
+<?php
+include 'includes/footer.php';
+?>

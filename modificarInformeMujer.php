@@ -1,5 +1,7 @@
 <?php
-
+require 'sesion/config.php';
+require 'funciones/autenticacion.php';
+autenticar();
 require 'funciones/conexion.php';
 require 'funciones/informesMujeres.php';
 $chequeo = actualizarInforme();

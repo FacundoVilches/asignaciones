@@ -1,7 +1,9 @@
 <?php
-
+require 'sesion/config.php';
+require 'funciones/autenticacion.php';
+autenticar();
 include 'includes/index.html';
-include 'includes/nav.html';
+include 'includes/nav.php';
 require 'funciones/conexion.php';
 require 'funciones/informesMujeres.php';
 
@@ -173,5 +175,6 @@ $cantidad = cantidadNoAsignados();
         }
     }
 </script>
-</body>
-</html>
+<?php
+    include 'includes/footer.php';
+?>

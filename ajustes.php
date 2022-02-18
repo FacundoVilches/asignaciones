@@ -1,7 +1,10 @@
 <?php
 
+require 'sesion/config.php';
+require 'funciones/autenticacion.php';
+autenticar();
 include 'includes/index.html';
-include 'includes/nav.html';
+include 'includes/nav.php';
 
 ?>
 
@@ -30,7 +33,10 @@ include 'includes/nav.html';
         <a href="formReset.php" class="btn btn-outline-dark btn-lg m-4"><i class="fa-solid me-3 fa-power-off"></i>REINICIAR EL SISTEMA</a>
     </div>
     <div class="col alert alert-info mt-4 text-center">
-        Ante cualquier inconveniente, comunicarse con el desarrollador <i class="fa-solid fa-circle-exclamation"></i>
+        <h5>Ante cualquier inconveniente, comunicarse con el desarrollador <i class="fa-solid fa-circle-exclamation"></i></h5>
     </div>
 
 </main>
+<?php
+    include 'includes/footer.php';
+?>

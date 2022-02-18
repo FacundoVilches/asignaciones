@@ -1,5 +1,7 @@
 <?php
-
+require 'sesion/config.php';
+require 'funciones/autenticacion.php';
+autenticar();
 require 'funciones/conexion.php';
 include 'includes/index.html';
 $nombre = $_POST['buscar'];

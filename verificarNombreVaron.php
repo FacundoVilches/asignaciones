@@ -1,5 +1,7 @@
 <?php
- 
+ require 'sesion/config.php';
+ require 'funciones/autenticacion.php';
+ autenticar();
  $link = mysqli_connect("localhost","root","","barriogodoy");
 
  if(isset($_POST['nombreVaron'])){

@@ -1,5 +1,7 @@
 <?php
-
+require 'sesion/config.php';
+require 'funciones/autenticacion.php';
+autenticar();
 include 'includes/index.html';
 
 ?>
@@ -29,7 +31,7 @@ include 'includes/index.html';
                 </div>
                 <div class="row m-3 mx-auto d-flex justify-content-between">
                     <div class="col text-center">
-                        <button id="btn"class="btn btn-outline-success m-3 btn-md fw-bold"><i class="fas fa-check"></i> Agregar</button>
+                        <button id="btn" class="btn btn-outline-success m-3 btn-md fw-bold"><i class="fas fa-check"></i> Agregar</button>
                     </div>
                     <div class="col text-center">
                         <a href="listaVarones.php" class="btn btn-outline-secondary m-3 btn-md fw-bold"><i class="fas fa-arrow-left"></i> Volver</a>
