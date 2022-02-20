@@ -1,7 +1,7 @@
 <?php
 require 'sesion/config.php';
 include 'includes/index.html';
-// include 'includes/nav.php';
+include 'includes/nav.php';
 
 ?>
 

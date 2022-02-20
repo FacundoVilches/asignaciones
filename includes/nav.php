@@ -1,5 +1,5 @@
 <?php
-include 'includes/index.html';
+include '../includes/index.html';
 ?>
 
 <header class="bg-dark mb-3 shadow-sm border-bottom border-light">

@@ -21,14 +21,22 @@ function login() {
         $_SESSION['idusuario'] = $usuario['idusuario'];
         $_SESSION['nombre'] = $usuario['nombre'];
 
-        header('location:admin.php');
+        if($username == 'cesarbrochero'){
+            header('location:discursos/admin.php');
+        }
+
+        if($username == 'flavioescobar'){
+            header('location:escuela/admin.php');
+        }
+
+        
     }
 }
 
 function logout() {
     session_unset();
     session_destroy();
-    header('refresh:3; url=index.php');
+    header('refresh:3; url=../index.php');
 }
 
 function autenticar()
