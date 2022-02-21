@@ -42,7 +42,24 @@ function logout() {
 function autenticar()
 {
     if(!isset($_SESSION['login'])){
-        header('location: index.php?error=2');
+        header('location: ../index.php?error=2');
+    }
+    if(($_SESSION['nombre'] != 'Flavio Escobar')){
+        session_unset();
+        session_destroy();
+        header('location: ../index.php?error=3');
+    }
+}
+
+function autenticar2()
+{
+    if(!isset($_SESSION['login'])){
+        header('location: ../index.php?error=2');
+    }
+    if(($_SESSION['nombre'] != 'César Brochero')){
+        session_unset();
+        session_destroy();
+        header('location: ../index.php?error=3');
     }
 }
 

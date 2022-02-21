@@ -36,6 +36,12 @@ include 'includes/index.html';
                             Debe iniciar sesión
                      </div>
               <?php
+              } else if(isset($_GET['error']) && $_GET['error'] == 3) {
+              ?>
+              <div class="alert alert-danger col-12 mx-auto">
+                            Permisos denegados. Vuelva a iniciar sesión
+                     </div>
+              <?php
               }
               ?>
 </main>

@@ -279,3 +279,6 @@ function vacio() {
         }
     }
 </script>
+<?php
+    include '../includes/footer.php';
+?>

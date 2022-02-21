@@ -1,5 +1,5 @@
 <?php
-require 'sesion/config.php';
+require '../sesion/config.php';
 require '../funciones/autenticacion.php';
 autenticar();
 include '../includes/index.html';
@@ -20,6 +20,9 @@ include '../includes/index.html';
     <div class="container text-center">
 
         <!-- <h1 class="m-4">INICIO</h1> -->
+        <div class="col">
+            <h1>¡Bienvenido <?=$_SESSION['nombre'] ?>!</h1>
+        </div>
 
         <div class="col">
             <a href="listaVarones.php" class="btn btn-lg btn-outline-primary m-4"><i class="fas me-3 fa-male"></i>LISTA DE VARONES</a>

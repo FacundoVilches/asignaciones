@@ -1,7 +1,7 @@
 <?php
 require '../sesion/config.php';
 require '../funciones/autenticacion.php';
-autenticar();
+autenticar2();
 include '../includes/index.html';
 
 
@@ -11,7 +11,7 @@ include '../includes/index.html';
 
 <body style="
     background-color:#cbcaca;
-    height:100%;
+
     margin:0;
     padding: 0;
     display:flex;
@@ -21,20 +21,30 @@ include '../includes/index.html';
     <div class="container text-center">
 
         <!-- <h1 class="m-4">INICIO</h1> -->
+        <div class="col">
+            <h1>¡Bienvenido <?=$_SESSION['nombre'] ?>!</h1>
+        </div>
 
         <div class="col">
-            <a href="listaDiscursantes.php" class="btn btn-lg btn-outline-primary m-4"><i class="fa-solid fa-users"></i> LISTA DE DISCURSANTES</a>
+            <a href="listaDiscursantesCongregacion.php" class="btn btn-lg btn-outline-primary m-3"><i class="fa-solid fa-users"></i> DISCURSANTES DE LA CONGREGACIÓN</a>
+        </div>
+        <div class="col">
+            <a href="informesDiscursantesCongregacion.php" class="btn btn-lg btn-outline-primary m-3"><i class="fas fa-sign-out"></i> INFORMES DE DISCURSOS</a>
         </div>
         <hr>
         <div class="col">
-            <a href="listaInformesDiscursos.php" class="btn btn-lg btn-outline-primary m-4"><i class="fa-solid fa-list-ol"></i> INFORMES DE DISCURSOS</a>
+            <a href="listaDiscursantesVisitantes.php" class="btn btn-lg btn-outline-danger m-3"><i class="fa-solid fa-user-tie"></i> DISCURSANTES VISITANTES</a>
         </div>
         <div class="col">
-            <a href="listaBosquejos.php" class="btn btn-outline-primary btn-lg m-4"><i class="fa-solid fa-file"></i> BOSQUEJOS</a>
+            <a href="informesDiscursantesVisitantes.php" class="btn btn-lg btn-outline-danger m-3"><i class="fas fa-sign-in"></i> INFORMES DE DISCURSOS</a>
         </div>
         <hr>
         <div class="col">
-            <a href="ajustes.php" class="btn btn-outline-secondary btn-lg m-4"><i class="fa-solid me-3 fa-wrench"></i>AJUSTES</a>
+            <a href="listaBosquejos.php" class="btn btn-outline-success btn-lg m-3"><i class="fa-solid fa-file"></i> BOSQUEJOS</a>
+        </div>
+        <hr>
+        <div class="col">
+            <a href="ajustes.php" class="btn btn-outline-secondary btn-lg m-3"><i class="fa-solid me-3 fa-wrench"></i> AJUSTES</a>
         </div>
 
 
